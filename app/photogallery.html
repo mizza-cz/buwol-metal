@@ -26,7 +26,7 @@
 <script defer src="/dist/js/cookie-consent.js"></script>
 <script defer src="/dist/js/cookie-consent-social.js" type="text/plain" data-cookiecategory="social"></script>
 
-<title>SK BUWOL Luka naD JIHLAVou</title>
+<title>HK Kralupy nad Vltavou</title>
 
     </head>
     <body>
@@ -197,31 +197,23 @@
 
         <main class="container pb-20 pt-10">
             <div class="mb-6 md:bg-grey-60/25 md:p-8 lg:px-10">
-                <h1 class="text-3xl font-bold uppercase lg:text-4xl">Archiv</h1>
+                <h1 class="text-3xl font-bold uppercase lg:text-4xl">Fotogalerie</h1>
             </div>
 
-            <form id="archive-form" action="" method="GET" class="mb-10 grid grid-cols-1 gap-x-2 gap-y-6 sm:grid-cols-3">
-                <select class="custom-select w-full" name="category" id="category" onchange="document.querySelector('#archive-form').submit()">
+            <form id="photogallery-form" action="" method="GET" class="mb-10 grid grid-cols-1 gap-x-2 gap-y-6 sm:grid-cols-3">
+                <select class="custom-select w-full" name="category" id="category" onchange="document.querySelector('#photogallery-form').submit()">
                     <option value="">Kategorie</option>
                     <option value="1">Mládež</option>
                 </select>
-                <select class="custom-select w-full" name="month" id="month" onchange="document.querySelector('#archive-form').submit()">
-                    <option value="">Měsíc</option>
-                    <option value="1">Leden</option>
-                </select>
-                <select class="custom-select w-full" name="year" id="year" onchange="document.querySelector('#archive-form').submit()">
-                    <option value="">Rok</option>
-                    <option value="2023">2023</option>
-                </select>
-                <input type="text" name="q" class="custom-input sm:col-span-2" placeholder="Vyhledat článek" />
+                <input type="text" name="q" class="custom-input" placeholder="Vyhledat fotogalerii" />
                 <button type="submit" class="btn">Hledat</button>
             </form>
 
-            <!-- <p class="notice w-max">Nebyly nalezeny žádné články.</p> -->
+            <!-- <p class="notice w-max">Nebyly nalezeny žádné fotogalerie.</p> -->
 
             <div class="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 
-                <a href="#" class="group">
+                <a href="#" data-source="/ajax-gallery.json" data-gallery-id="0" class="group">
                     <article>
                         <div class="mb-4 overflow-hidden">
                             <img
@@ -244,7 +236,7 @@
                     </article>
                 </a>
                 
-                <a href="#" class="group">
+                <a href="#" data-source="/ajax-gallery.json" data-gallery-id="1" class="group">
                     <article>
                         <div class="mb-4 overflow-hidden">
                             <img
@@ -267,7 +259,7 @@
                     </article>
                 </a>
                 
-                <a href="#" class="group">
+                <a href="#" data-source="/ajax-gallery.json" data-gallery-id="2" class="group">
                     <article>
                         <div class="mb-4 overflow-hidden">
                             <img
@@ -290,7 +282,7 @@
                     </article>
                 </a>
                 
-                <a href="#" class="group">
+                <a href="#" data-source="/ajax-gallery.json" data-gallery-id="3" class="group">
                     <article>
                         <div class="mb-4 overflow-hidden">
                             <img
@@ -313,7 +305,7 @@
                     </article>
                 </a>
                 
-                <a href="#" class="group">
+                <a href="#" data-source="/ajax-gallery.json" data-gallery-id="4" class="group">
                     <article>
                         <div class="mb-4 overflow-hidden">
                             <img
@@ -336,7 +328,7 @@
                     </article>
                 </a>
                 
-                <a href="#" class="group">
+                <a href="#" data-source="/ajax-gallery.json" data-gallery-id="5" class="group">
                     <article>
                         <div class="mb-4 overflow-hidden">
                             <img
@@ -359,7 +351,7 @@
                     </article>
                 </a>
                 
-                <a href="#" class="group">
+                <a href="#" data-source="/ajax-gallery.json" data-gallery-id="6" class="group">
                     <article>
                         <div class="mb-4 overflow-hidden">
                             <img
@@ -382,7 +374,7 @@
                     </article>
                 </a>
                 
-                <a href="#" class="group">
+                <a href="#" data-source="/ajax-gallery.json" data-gallery-id="7" class="group">
                     <article>
                         <div class="mb-4 overflow-hidden">
                             <img
@@ -405,7 +397,7 @@
                     </article>
                 </a>
                 
-                <a href="#" class="group">
+                <a href="#" data-source="/ajax-gallery.json" data-gallery-id="8" class="group">
                     <article>
                         <div class="mb-4 overflow-hidden">
                             <img
@@ -428,7 +420,7 @@
                     </article>
                 </a>
                 
-                <a href="#" class="group">
+                <a href="#" data-source="/ajax-gallery.json" data-gallery-id="9" class="group">
                     <article>
                         <div class="mb-4 overflow-hidden">
                             <img
@@ -451,7 +443,7 @@
                     </article>
                 </a>
                 
-                <a href="#" class="group">
+                <a href="#" data-source="/ajax-gallery.json" data-gallery-id="10" class="group">
                     <article>
                         <div class="mb-4 overflow-hidden">
                             <img
@@ -474,7 +466,7 @@
                     </article>
                 </a>
                 
-                <a href="#" class="group">
+                <a href="#" data-source="/ajax-gallery.json" data-gallery-id="11" class="group">
                     <article>
                         <div class="mb-4 overflow-hidden">
                             <img
@@ -498,6 +490,8 @@
                 </a>
                 
             </div>
+            <script src="/dist/js/fslightbox.js" async></script>
+            <script src="/dist/js/ajax-gallery.js" async></script>
 
             <nav aria-label="Stránkování">
     <ul class="flex items-center justify-center gap-2">

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    @@include('./components/head.html', {'title': 'SK BUWOL Luka naD JIHLAVou'})
+  </head>
+  <body>
+    @@include('./components/dialog.html') @@include('./components/header.html')
+
+    <main>
+      @@include('./components/homepage/topstory.html')
+      @@include('./components/homepage/matches.html')
+
+      <section
+        class="container my-10 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 lg:gap-6"
+        aria-label="Bannery"
+      >
+        @@for(i = 0; i < 3; i++) {
+        <a href="#" target="_blank" class="mx-auto block">
+          <img class="max-w-full" src="https://placehold.co/432x216" alt="" />
+        </a>
+        }
+      </section>
+
+      @@include('./components/homepage/more-articles.html')
+
+      <div class="container my-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-8">
+        <section class="lg:col-span-4" aria-label="Hráč měsíce">
+          <h3 class="mb-4 text-2xl uppercase text-secondary">Aktuality</h3>
+          <div class="flex flex-col gap-4 lg:col-span-2">
+            @@for(i = 0; i < 4; i++) {
+            <a href="article.html" class="group">
+              <article>
+                <div class="mb-2 flex gap-1">
+                  <span class="inline-block bg-primary px-2 py-1 text-sm font-bold text-white"
+                    >Mládež</span
+                  >
+                  <span class="inline-block bg-primary px-2 py-1 text-sm font-bold text-white"
+                    >Včera</span
+                  >
+                </div>
+                <h3 class="link-underline link-underline-group line-clamp-2 text-2xl font-bold">
+                  Připravujeme nový web! Připravujeme nový web! Připravujeme nový web!
+                </h3>
+              </article>
+            </a>
+            }
+            <a href="archive.html" class="btn mx-auto w-max max-w-full">Další Aktuality</a>
+          </div>
+        </section>
+
+        @@include('./components/homepage/standings.html')
+      </div>
+
+      @@include('./components/homepage/partners.html')
+    </main>
+
+    @@include('./components/footer.html')
+  </body>
+</html>

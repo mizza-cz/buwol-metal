@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
+    <head>
+        <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -28,9 +28,9 @@
 
 <title>HK Kralupy nad Vltavou</title>
 
-  </head>
-  <body>
-    <header class="sticky top-0 z-50">
+    </head>
+    <body>
+        <header class="sticky top-0 z-50">
   <div class="bg-white">
     <ul class="container hidden py-4 xl:flex xl:items-center xl:justify-end xl:gap-1">
       <li>
@@ -195,223 +195,210 @@
 <script src="/dist/js/menu.js" async></script>
 
 
-    <main class="container pb-20">
-      <div
-        class="relative md:flex md:aspect-[22/9] md:items-end md:before:absolute md:before:inset-0 md:before:z-1 md:before:bg-gradient-to-t md:before:from-black md:before:to-transparent"
-      >
-        <img
-          class="inset-0 aspect-[3/2] w-full object-cover md:absolute md:inset-0 md:h-full"
-          src="https://picsum.photos/1260/516"
-          alt=""
-          width="1260"
-          height="516"
-        />
-        <div class="l-0 r-0 relative z-10 mx-auto pt-4 md:p-8 lg:p-10">
-          <div class="mb-2 flex justify-center gap-2 lg:mb-4">
-            <span class="inline-block bg-primary px-2 py-1 text-sm font-bold text-white"
-              >A-tým</span
-            >
-            <span class="inline-block bg-primary px-2 py-1 text-sm font-bold text-white">Dnes</span>
-          </div>
-          <h1 class="text-center text-2xl uppercase text-secondary md:text-white lg:text-4xl">
-            1. V prvním říjnovém utkání se áčko představí na ledě Děčína
-          </h1>
-        </div>
-      </div>
-
-      <div class="mx-auto mb-8 mt-4 flex max-w-[992px] flex-col gap-4 md:mt-0 md:gap-8">
-        <div class="md:bg-grey-60/25 md:p-8 lg:px-10">
-          <p class="text-lg font-bold">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus accusamus ab
-            quibusdam error deleniti ducimus velit fugiat delectus cum blanditiis unde voluptatum
-            voluptate suscipit quam quae quos, voluptas necessitatibus magnam?
-          </p>
-        </div>
-
-        <div class="bg-grey-60/25 p-4 md:p-8 lg:px-10">
-          <div class="mb-4 flex items-center justify-center gap-4 md:mb-8 lg:gap-6">
-            <img
-              class="hidden aspect-square object-contain sm:block"
-              src="/dist/img/logo.png"
-              width="72"
-              height="72"
-              alt=""
-            />
-            <div class="text-center">
-              <span class="mb-2 block text-sm">2. liga - 1. kolo so 24. 9. 17:00</span>
-              <div class="mb-3 grid grid-cols-[1fr_17px_1fr] items-center gap-3">
-                <h3 class="text-end text-lg font-bold uppercase lg:text-2xl">Mostečtí lvi</h3>
-                <span class="lg:text-lg">vs</span>
-                <h3 class="text-start text-lg font-bold uppercase lg:text-2xl">
-                  Velmi dlouhé jméno týmu
-                </h3>
-              </div>
-              <b class="win block text-3xl lg:text-4xl">3:0</b>
-              <span>(1:0, 2:0, 3:0)</span>
+        <main class="container pb-20 pt-10">
+            <div class="mb-10 flex flex-wrap items-center justify-between gap-6 md:bg-grey-60/25 md:p-8 lg:px-10">
+                <h1 class="text-3xl font-bold uppercase lg:text-4xl">Statistiky A-tým 2023/2024</h1>
+                <form id="stats-form" method="GET">
+                    <select class="custom-select min-w-[150px]" name="season" id="season" onchange="document.querySelector('#stats-form').submit()">
+                        <option value="2024">2023/2024</option>
+                        <option value="2023">2022/2023</option>
+                    </select>
+                </form>
             </div>
-            <img
-              class="hidden aspect-square object-contain sm:block"
-              src="/dist/img/logo.png"
-              width="72"
-              height="72"
-              alt=""
-            />
-          </div>
-          <div class="flex flex-col gap-4 lg:gap-6">
-            <div>
-              <p>
-                <b>Branky a nahrávky:</b> 8. Mrva (Zdeněk, Kofroň), 45. Kolarz (Ćmiel) – 4. Čejka
-                (Čuřík), 12. Dobiáš (Hefka, Romančík), 16. Sebera (Vašíček), 41. Blaha (Čuřík).
-                <b>Rozhodčí:</b> Šico – Bartek, Klimek. <b>Vyloučení:</b> 4:3. <b>Využití:</b> 0:0.
-                <b>V oslabení:</b> 0:0. <b>Diváci:</b> 819. <b>Střely na branku:</b> 44:28 (15:10,
-                14:7, 15:11). <b>Průběh utkání:</b> 0:1, 1:1, 1:4, 2:4.
-              </p>
+
+            <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+                <div class="lg:col-span-2">
+                    <!-- <p class="notice w-max max-w-full">Nebyly nalezeny žádné statistiky.</p> -->
+
+                    <div class="flex flex-col gap-10">
+                        <div>
+                            <h3 class="text-secondary mb-6 text-2xl font-bold uppercase">Brankáři</h3>
+                            <div class="overflow-x-auto">
+                                <table class="styled">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th class="text-left">Jméno</th>
+                                            <th>Min</th>
+                                            <th>Stř</th>
+                                            <th>Ink</th>
+                                            <th>Zás</th>
+                                            <th>Úsp</th>
+                                            <th>A</th>
+                                            <th>TM</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td><a class="link-underline link-underline-normal" href="player.html">Dlouhé jméno</a></td>
+                                            <td class="text-center">120</td>
+                                            <td class="text-center">20</td>
+                                            <td class="text-center">5</td>
+                                            <td class="text-center">12</td>
+                                            <td class="text-center">90%</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">2</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td class="text-center">2</td>
+                                            <td><a class="link-underline link-underline-normal" href="player.html">Dlouhé jméno</a></td>
+                                            <td class="text-center">120</td>
+                                            <td class="text-center">20</td>
+                                            <td class="text-center">5</td>
+                                            <td class="text-center">12</td>
+                                            <td class="text-center">90%</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">2</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-secondary mb-6 text-2xl font-bold uppercase">Hráči v poli</h3>
+                            <div class="overflow-x-auto">
+                                <table class="styled">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th class="text-left">Jméno</th>
+                                            <th>G</th>
+                                            <th>A</th>
+                                            <th>Stř</th>
+                                            <th>B</th>
+                                            <th>+/-</th>
+                                            <th>TM</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td><a class="link-underline link-underline-normal" href="player.html">Dlouhé jméno</a></td>
+                                            <td class="text-center">4</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">8</td>
+                                            <td class="text-center">7</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">10</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td class="text-center">2</td>
+                                            <td><a class="link-underline link-underline-normal" href="player.html">Dlouhé jméno</a></td>
+                                            <td class="text-center">4</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">8</td>
+                                            <td class="text-center">7</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">10</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-10 lg:col-span-1">
+                    <div>
+    <h2 class="text-secondary mb-2 text-2xl font-bold uppercase">A-tým</h2>
+    <ul>
+        
+        <li class="border-b-secondary/10 border-b last:border-b-0">
+            <!-- active class: 'text-primary' -->
+            <a href="#" class="link-underline link-underline-normal block p-3 font-medium">Soupiska</a>
+        </li>
+        
+        <li class="border-b-secondary/10 border-b last:border-b-0">
+            <!-- active class: 'text-primary' -->
+            <a href="#" class="link-underline link-underline-normal block p-3 font-medium">Realizační tým</a>
+        </li>
+        
+        <li class="border-b-secondary/10 border-b last:border-b-0">
+            <!-- active class: 'text-primary' -->
+            <a href="#" class="link-underline link-underline-normal block p-3 font-medium">Zápasy</a>
+        </li>
+        
+        <li class="border-b-secondary/10 border-b last:border-b-0">
+            <!-- active class: 'text-primary' -->
+            <a href="#" class="link-underline link-underline-normal block p-3 font-medium">Tabulka</a>
+        </li>
+        
+        <li class="border-b-secondary/10 border-b last:border-b-0">
+            <!-- active class: 'text-primary' -->
+            <a href="#" class="link-underline link-underline-normal block p-3 font-medium">Statistiky</a>
+        </li>
+        
+    </ul>
+</div>
+ <section aria-label="Další články">
+    <div class="mb-8 flex flex-col gap-6">
+        <!-- <p class="notice w-max">Nebyly nalezeny žádné články.</p> -->
+
+        
+        <a href="#" class="group">
+            <article>
+                <div class="mb-4 overflow-hidden">
+                    <img
+                        class="aspect-[3/2] w-full object-cover transition-transform group-hover:scale-105"
+                        src="https://picsum.photos/393/262"
+                        srcset="https://picsum.photos/393/262 262px, https://picsum.photos/440/293 440w"
+                        sizes="(min-width: 1016px) 393px, calc(100vw - 24px)"
+                        width="393"
+                        height="262"
+                        alt=""
+                        loading="lazy"
+                    />
+                </div>
+                <div>
+                    <span class="bg-primary mb-2 inline-block px-2 py-1 text-sm font-bold text-white">22. 8. 2023</span>
+                    <h2 class="link-underline link-underline-group line-clamp-3 text-2xl font-bold">
+                        1. V prvním říjnovém utkání se áčko představí na ledě Děčína
+                    </h2>
+                </div>
+            </article>
+        </a>
+        
+        <a href="#" class="group">
+            <article>
+                <div class="mb-4 overflow-hidden">
+                    <img
+                        class="aspect-[3/2] w-full object-cover transition-transform group-hover:scale-105"
+                        src="https://picsum.photos/393/262"
+                        srcset="https://picsum.photos/393/262 262px, https://picsum.photos/440/293 440w"
+                        sizes="(min-width: 1016px) 393px, calc(100vw - 24px)"
+                        width="393"
+                        height="262"
+                        alt=""
+                        loading="lazy"
+                    />
+                </div>
+                <div>
+                    <span class="bg-primary mb-2 inline-block px-2 py-1 text-sm font-bold text-white">22. 8. 2023</span>
+                    <h2 class="link-underline link-underline-group line-clamp-3 text-2xl font-bold">
+                        1. V prvním říjnovém utkání se áčko představí na ledě Děčína
+                    </h2>
+                </div>
+            </article>
+        </a>
+        
+    </div>
+    <div class="flex justify-center">
+        <a class="btn" href="archive.html">Další články</a>
+    </div>
+</section>
+
+                </div>
             </div>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6">
-              <div>
-                <p>
-                  <b>HK Kralupy:</b> Štipčák – Mrowiec, Havlík, Kuboš, Homola, Kunc, Dudáš (A) –
-                  Pastor, Zdeněk, Mrva (A), Ćmiel, Krupa, Kolarz (C), Plevka, Urbančík, Pawliczek,
-                  Antoníček, Apolenář, Foltýn, Kofroň
-                </p>
-              </div>
-              <div>
-                <p>
-                  <b>HK Kralupy:</b> Štipčák – Mrowiec, Havlík, Kuboš, Homola, Kunc, Dudáš (A) –
-                  Pastor, Zdeněk, Mrva (A), Ćmiel, Krupa, Kolarz (C), Plevka, Urbančík, Pawliczek,
-                  Antoníček, Apolenář, Foltýn, Kofroň
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        </main>
 
-        <div class="typo md:px-8 lg:px-10">
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil doloribus, cum
-            distinctio architecto ad est esse quidem blanditiis aspernatur. Est cum possimus fuga
-            quo dolore, amet deleniti eius quaerat aspernatur?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil doloribus, cum
-            distinctio architecto ad est esse quidem blanditiis aspernatur. Est cum possimus fuga
-            quo dolore, amet deleniti eius quaerat aspernatur?
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil doloribus, cum
-            distinctio architecto ad est esse quidem blanditiis aspernatur. Est cum possimus fuga
-            quo dolore, amet deleniti eius quaerat aspernatur?
-          </p>
-          <ul>
-            <li>List item 1</li>
-            <li>List item 2</li>
-            <li>List item 3</li>
-          </ul>
-          <ol>
-            <li>List item 1</li>
-            <li>List item 2</li>
-            <li>List item 3</li>
-          </ol>
-          <h1>Heading 1</h1>
-          <h2>Heading 2</h2>
-          <h3>Heading 3</h3>
-          <h4>Heading 4</h4>
-          <h5>Heading 5</h5>
-          <h6>Heading 6</h6>
-        </div>
-      </div>
-
-      <ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        
-        <li>
-          <a
-            href="#"
-            data-source="/ajax-gallery.json"
-            data-gallery-id="1"
-            data-start="0"
-            class="group relative block overflow-hidden"
-          >
-            <img
-              class="aspect-[3/2] w-full object-cover transition-transform group-hover:scale-105"
-              src="https://picsum.photos/297/198"
-              srcset="https://picsum.photos/297/198 297w, https://picsum.photos/440/293 440w"
-              sizes="(min-width: 1016px) 297px, calc(100vw - 24px)"
-              width="297"
-              height="198"
-              alt=""
-            />
-          </a>
-        </li>
-        
-        <li>
-          <a
-            href="#"
-            data-source="/ajax-gallery.json"
-            data-gallery-id="1"
-            data-start="1"
-            class="group relative block overflow-hidden"
-          >
-            <img
-              class="aspect-[3/2] w-full object-cover transition-transform group-hover:scale-105"
-              src="https://picsum.photos/297/198"
-              srcset="https://picsum.photos/297/198 297w, https://picsum.photos/440/293 440w"
-              sizes="(min-width: 1016px) 297px, calc(100vw - 24px)"
-              width="297"
-              height="198"
-              alt=""
-            />
-          </a>
-        </li>
-        
-        <li>
-          <a
-            href="#"
-            data-source="/ajax-gallery.json"
-            data-gallery-id="1"
-            data-start="2"
-            class="group relative block overflow-hidden"
-          >
-            <img
-              class="aspect-[3/2] w-full object-cover transition-transform group-hover:scale-105"
-              src="https://picsum.photos/297/198"
-              srcset="https://picsum.photos/297/198 297w, https://picsum.photos/440/293 440w"
-              sizes="(min-width: 1016px) 297px, calc(100vw - 24px)"
-              width="297"
-              height="198"
-              alt=""
-            />
-          </a>
-        </li>
-        
-        <li>
-          <a
-            href="#"
-            data-source="/ajax-gallery.json"
-            data-gallery-id="1"
-            data-start="3"
-            class="group relative block overflow-hidden before:absolute before:inset-0 before:z-1 before:h-full before:w-full before:bg-secondary/50"
-          >
-            <img
-              class="duration-300 aspect-[3/2] w-full object-cover transition-transform group-hover:scale-105"
-              src="https://picsum.photos/297/198"
-              srcset="https://picsum.photos/297/198 297w, https://picsum.photos/440/293 440w"
-              sizes="(min-width: 1016px) 297px, calc(100vw - 24px)"
-              width="297"
-              height="198"
-              alt=""
-            />
-            <b
-              class="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-4xl text-white"
-              >+32</b
-            >
-          </a>
-        </li>
-      </ul>
-      <script src="/dist/js/fslightbox.js" async></script>
-      <script src="/dist/js/ajax-gallery.js" async></script>
-    </main>
-
-    <footer class="bg-primary py-8 text-center text-white">
+        <footer class="bg-primary py-8 text-center text-white">
   <div class="container mx-auto flex flex-col items-center space-y-6">
     <!-- Логотип -->
     <a href="/">
@@ -569,5 +556,5 @@
 </svg>
 </div>
 
-  </body>
+    </body>
 </html>
