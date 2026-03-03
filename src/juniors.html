@@ -150,7 +150,23 @@
         </div>
       </div>
 
-      <script src="./dist/js/accordion.js" async></script>
+      <script>
+        document.querySelectorAll('[data-acc-btn]').forEach((btn) => {
+          const panel = btn.parentElement.querySelector('[data-acc-panel]');
+          const icon = btn.querySelector('[data-acc-icon]');
+
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          panel.classList.toggle('hidden', !expanded);
+          if (icon) icon.textContent = expanded ? '−' : '+';
+
+          btn.addEventListener('click', () => {
+            const isOpen = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!isOpen));
+            panel.classList.toggle('hidden', isOpen);
+            if (icon) icon.textContent = isOpen ? '+' : '−';
+          });
+        });
+      </script>
 
       <div class="mb-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         @@for(i = 0; i < 12; i++) {
